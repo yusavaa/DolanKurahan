@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Katalog UMKM</title>
+  </head>
+  <body>
+    <header class="sticky z-40 w-full top-0 bg-white shadow-md">
+      <div
+        class="flex justify-between max-w-xs md:max-w-3xl xl:max-w-7xl m-auto py-5 items-center"
+      >
+        <h3 class="font-semibold text-lg">Dolan Kurahan</h3>
+        <nav>
+          <div class="hidden md:flex items-center">
+            <a href="index.html" class="px-4">Beranda</a>
+            <a href="profil-dusun.html" class="px-4 ml-4">Profil Dusun</a>
+            <a href="profil-dusun.html#lokasi" class="px-4 ml-4">Lokasi</a>
+            <a
+              href="katalog-umkm.html"
+              class="inline-block ml-4 px-4 py-2 bg-amber-500 text-white rounded-md"
+              >UMKM</a
+            >
+          </div>
+
+          <button id="menu-btn" class="block md:hidden focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-0 bottom-0 right-0 w-1/2 max-w-xs bg-white shadow-md rounded-l-md z-50 flex flex-col px-4 py-6"
+    >
+      <!-- Tombol Close -->
+      <button id="close-btn" class="self-end mb-4 focus:outline-none">
+        <svg
+          class="w-6 h-6 text-gray-600 hover:text-gray-900"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+
+      <a href="index.html" class="py-2 border-b border-gray-200">Beranda</a>
+      <a href="profil-dusun.html" class="py-2 border-b border-gray-200"
+        >Profil Dusun</a
+      >
+      <a href="profil-dusun.html#lokasi" class="py-2 border-b border-gray-200"
+        >Lokasi</a
+      >
+      <a href="katalog-umkm.html" class="py-2">UMKM</a>
+    </div>
+
+    <main class="max-w-xs md:max-w-3xl xl:max-w-7xl mx-auto mt-12 xl:mt-24">
+      <h2 class="font-bold text-4xl mb-8">Katalog UMKM</h2>
+      <section id="katalog-umkm" class="grid md:grid-cols-3 gap-5 xl:gap-8"></section>
+    </main>
+
+    <footer class="mt-16 bg-amber-300">
+      <div class="max-w-7xl m-auto py-5">
+        <p class="text-center text-sm">
+          2025 Dusun Kurahan, Murtigading. Powered By
+          <a href="https://pmb.uii.ac.id/" class="block md:inline font-semibold"
+            >KKN 71 Universitas Islam Indonesia | Unit 76</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeBtn = document.getElementById("close-btn");
+
+      btn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+
+      fetch(
+        "https://opensheet.elk.sh/1M9LqXU2h4637_n3RSw4UzHcOP54sYANLRfjKO_YmZLs/Sheet1"
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          const container = document.getElementById("katalog-umkm");
+          data.forEach((item) => {
+            const el = document.createElement("div");
+            el.innerHTML = `
+          <div class="rounded-md shadow-md">
+            <div class="bg-amber-200 h-40 xl:h-48 rounded-t-md"></div>
+            <div class="px-6 pt-3 xl:pt-6">
+              <h3 class="font-semibold text-xl mb-2 xl:mb-4">${item["Nama UMKM"]}</h3>
+              <p class="line-clamp-2">
+                ${item.Deskripsi}
+              </p>
+            </div>
+            <hr class="mt-4 xl:mt-6 border-t border-gray-300" />
+            <a href="detail-umkm.html" class="inline-block mx-6 my-6 font-semibold">
+              Selengkapnya
+            </a>
+          </div>
+        `;
+            container.appendChild(el);
+          });
+        });
+    </script>
+  </body>
+</html>

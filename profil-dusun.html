@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Profil Dusun</title>
+  </head>
+  <body>
+    <header class="sticky z-40 w-full top-0 bg-white shadow-md">
+      <div
+        class="flex justify-between max-w-xs md:max-w-3xl xl:max-w-7xl m-auto py-5 items-center"
+      >
+        <h3 class="font-semibold text-lg">Dolan Kurahan</h3>
+        <nav>
+          <div class="hidden md:flex items-center">
+            <a href="index.html" class="px-4">Beranda</a>
+            <a href="profil-dusun.html" class="px-4 ml-4">Profil Dusun</a>
+            <a href="profil-dusun.html#lokasi" class="px-4 ml-4">Lokasi</a>
+            <a
+              href="katalog-umkm.html"
+              class="inline-block ml-4 px-4 py-2 bg-amber-500 text-white rounded-md"
+              >UMKM</a
+            >
+          </div>
+
+          <button id="menu-btn" class="block md:hidden focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-0 bottom-0 right-0 w-1/2 max-w-xs bg-white shadow-md rounded-l-md z-50 flex flex-col px-4 py-6"
+    >
+      <!-- Tombol Close -->
+      <button id="close-btn" class="self-end mb-4 focus:outline-none">
+        <svg
+          class="w-6 h-6 text-gray-600 hover:text-gray-900"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+
+      <a href="index.html" class="py-2 border-b border-gray-200">Beranda</a>
+      <a href="profil-dusun.html" class="py-2 border-b border-gray-200"
+        >Profil Dusun</a
+      >
+      <a href="profil-dusun.html#lokasi" class="py-2 border-b border-gray-200"
+        >Lokasi</a
+      >
+      <a href="katalog-umkm.html" class="py-2">UMKM</a>
+    </div>
+
+    <main class="max-w-xs md:max-w-3xl xl:max-w-7xl mx-auto mt-16 md:mt-24">
+      <section class="grid xl:[grid-template-columns:3fr_2fr] gap-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-2 h-[50rem] md:h-[30rem]"
+        >
+          <div
+            class="bg-amber-100 md:col-span-2 md:row-span-2 rounded-md"
+          ></div>
+          <div class="bg-amber-200 rounded-md"></div>
+          <div class="bg-amber-300 md:row-span-2 rounded-md"></div>
+          <div class="hidden md:flex bg-amber-400 rounded-md"></div>
+          <div class="hidden md:flex bg-amber-500 rounded-md"></div>
+        </div>
+        <div>
+          <h2 class="font-bold text-3xl md:text-4xl mb-8">Dusun Kurahan</h2>
+          <p class="mb-6 md:text-lg">
+            Dusun Kurahan merupakan salah satu dusun yang berada di wilayah Desa
+            Murtigading, Kecamatan Sanden, Kabupaten Bantul, Daerah Istimewa
+            Yogyakarta. Dikenal dengan masyarakatnya yang ramah dan gotong
+            royong yang kuat, Dusun Kurahan terus tumbuh menjadi lingkungan yang
+            aktif dan produktif, baik secara sosial, budaya, maupun ekonomi.
+          </p>
+          <p class="mb-6 md:text-lg">
+            Warga Dusun Kurahan memiliki beragam potensi lokal, mulai dari
+            sektor pertanian, peternakan, hingga usaha mikro kecil dan menengah
+            (UMKM). Kekayaan budaya lokal serta semangat kemandirian warga
+            menjadikan dusun ini sebagai tempat yang subur untuk tumbuhnya
+            berbagai inisiatif ekonomi kreatif berbasis masyarakat.
+          </p>
+          <p class="md:text-lg">
+            Melalui peran aktif pemuda, kelompok perempuan, dan dukungan dari
+            pemerintah desa, Dusun Kurahan terus mendorong pengembangan potensi
+            lokal dengan tetap menjaga kearifan tradisi dan kelestarian
+            lingkungan.
+          </p>
+        </div>
+        <div id="lokasi" class="mt-8 scroll-mt-32">
+          <h2 class="font-bold text-3xl md:text-4xl mb-8">Lokasi</h2>
+          <p class="mb-6 md:text-lg">
+            Dusun Kurahan terletak di wilayah selatan Desa Murtigading,
+            Kecamatan Sanden, Kabupaten Bantul, Daerah Istimewa Yogyakarta.
+            Secara geografis, dusun ini berada tidak jauh dari kawasan pesisir
+            selatan Pulau Jawa, dengan akses yang mudah dijangkau melalui jalur
+            utama menuju Pantai Samas.
+          </p>
+          <p class="mb-6 md:text-lg">
+            Lokasi Dusun Kurahan berbatasan dengan area persawahan dan lahan
+            pertanian produktif, serta memiliki jarak tempuh sekitar:
+          </p>
+          <ul class="mb-6 ml-8 md:text-lg list-disc">
+            <li>±5 menit dari Kantor Desa Murtigading</li>
+            <li>±10 menit dari Pantai Samas</li>
+            <li>±15 menit dari Pantai Goa Cemara</li>
+            <li>±20 menit dari Pantai Kuwaru</li>
+            <li>±45 menit dari pusat Kota Yogyakarta</li>
+          </ul>
+          <p class="mb-6 md:text-lg">
+            Akses jalan menuju dusun sudah memadai, dengan infrastruktur yang
+            mendukung kegiatan ekonomi warga, termasuk distribusi hasil
+            pertanian dan produk UMKM. Dusun ini juga berada dekat dengan
+            berbagai fasilitas umum seperti sekolah, tempat ibadah, dan balai
+            desa.
+          </p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15805.25849689263!2d110.25199988935694!3d-7.966400994155266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7b01d7f79e5229%3A0xc32395c5f4411169!2sKurahan%20II%2C%20Murtigading%2C%20Kec.%20Sanden%2C%20Kabupaten%20Bantul%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1754464800014!5m2!1sid!2sid"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="xl:mt-8 md:w-lg h-[20rem]"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer class="mt-16 bg-amber-300">
+      <div class="max-w-7xl m-auto py-5">
+        <p class="text-center text-sm">
+          2025 Dusun Kurahan, Murtigading. Powered By
+          <a href="https://pmb.uii.ac.id/" class="block md:inline font-semibold"
+            >KKN 71 Universitas Islam Indonesia | Unit 76</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeBtn = document.getElementById("close-btn");
+
+      btn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>

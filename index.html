@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Dolan Kurahan</title>
+  </head>
+  <body>
+    <header class="sticky z-40 w-full top-0 bg-white shadow-md">
+      <div
+        class="flex justify-between max-w-xs md:max-w-3xl xl:max-w-7xl m-auto py-5 items-center"
+      >
+        <h3 class="font-semibold text-lg">Dolan Kurahan</h3>
+        <nav>
+          <div class="hidden md:flex items-center">
+            <a href="index.html" class="px-4">Beranda</a>
+            <a href="profil-dusun.html" class="px-4 ml-4">Profil Dusun</a>
+            <a href="profil-dusun.html#lokasi" class="px-4 ml-4">Lokasi</a>
+            <a
+              href="katalog-umkm.html"
+              class="inline-block ml-4 px-4 py-2 bg-amber-500 text-white rounded-md"
+              >UMKM</a
+            >
+          </div>
+
+          <button id="menu-btn" class="block md:hidden focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-0 bottom-0 right-0 w-1/2 max-w-xs bg-white shadow-md rounded-l-md z-50 flex flex-col px-4 py-6"
+    >
+      <!-- Tombol Close -->
+      <button id="close-btn" class="self-end mb-4 focus:outline-none">
+        <svg
+          class="w-6 h-6 text-gray-600 hover:text-gray-900"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+
+      <a href="index.html" class="py-2 border-b border-gray-200">Beranda</a>
+      <a href="profil-dusun.html" class="py-2 border-b border-gray-200"
+        >Profil Dusun</a
+      >
+      <a href="profil-dusun.html#lokasi" class="py-2 border-b border-gray-200"
+        >Lokasi</a
+      >
+      <a href="katalog-umkm.html" class="py-2">UMKM</a>
+    </div>
+
+    <main>
+      <section
+        class="grid xl:[grid-template-columns:2fr_3fr] max-w-xs md:max-w-3xl xl:max-w-7xl mx-auto mt-12 md:mt-24 gap-12 items-center"
+      >
+        <div>
+          <h1
+            class="text-4xl md:text-6xl font-bold leading-12 md:leading-20 mb-5"
+          >
+            Temukan Produk Unggulan UMKM Lokal
+          </h1>
+          <p class="text-md md:text-lg mb-5">
+            Selamat datang di Dusun Kurahan, Desa Murtigading. Temukan beragam
+            produk lokal berkualitas dan penuh cita rasa khas yang menggugah
+            hati.
+          </p>
+          <a
+            href="katalog-umkm.html"
+            class="inline-block px-6 py-2 font-semibold bg-amber-500 text-white rounded-md"
+            >Jelajahi Produk Kami</a
+          >
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-2 h-[50rem] md:h-[30rem]"
+        >
+          <div
+            class="bg-amber-100 md:col-span-2 md:row-span-2 rounded-md"
+          ></div>
+          <div class="bg-amber-200 rounded-md"></div>
+          <div class="bg-amber-300 md:row-span-2 rounded-md"></div>
+          <div class="hidden md:flex bg-amber-400 rounded-md"></div>
+          <div class="hidden md:flex bg-amber-500 rounded-md"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-16 bg-amber-300">
+      <div class="max-w-7xl m-auto py-5">
+        <p class="text-center text-sm">
+          2025 Dusun Kurahan, Murtigading. Powered By
+          <a href="https://pmb.uii.ac.id/" class="block md:inline font-semibold"
+            >KKN 71 Universitas Islam Indonesia | Unit 76</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeBtn = document.getElementById("close-btn");
+
+      btn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
