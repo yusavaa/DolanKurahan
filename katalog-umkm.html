@@ -78,7 +78,10 @@
 
     <main class="max-w-xs md:max-w-3xl xl:max-w-7xl mx-auto mt-12 xl:mt-24">
       <h2 class="font-bold text-4xl mb-8">Katalog UMKM</h2>
-      <section id="katalog-umkm" class="grid md:grid-cols-3 gap-5 xl:gap-8"></section>
+      <section
+        id="katalog-umkm"
+        class="grid md:grid-cols-3 gap-5 xl:gap-8"
+      ></section>
     </main>
 
     <footer class="mt-16 bg-amber-300">
@@ -106,7 +109,7 @@
       });
 
       fetch(
-        "https://opensheet.elk.sh/1M9LqXU2h4637_n3RSw4UzHcOP54sYANLRfjKO_YmZLs/Sheet1"
+        "https://opensheet.elk.sh/1FJTlvaJHLeO69XgZrE2tjLfxz5uDBZNSVxRRD0LtMBw/UMKM"
       )
         .then((res) => res.json())
         .then((data) => {
@@ -115,7 +118,9 @@
             const el = document.createElement("div");
             el.innerHTML = `
           <div class="rounded-md shadow-md">
-            <div class="bg-amber-200 h-40 xl:h-48 rounded-t-md"></div>
+            <div class="h-40 xl:h-48 rounded-t-md overflow-hidden">
+              <img src="${item["Foto UMKM"]}" class="w-full h-full object-cover">
+            </div>
             <div class="px-6 pt-3 xl:pt-6">
               <h3 class="font-semibold text-xl mb-2 xl:mb-4">${item["Nama UMKM"]}</h3>
               <p class="line-clamp-2">
@@ -123,7 +128,7 @@
               </p>
             </div>
             <hr class="mt-4 xl:mt-6 border-t border-gray-300" />
-            <a href="detail-umkm.html" class="inline-block mx-6 my-6 font-semibold">
+            <a href="detail-umkm.html?id=${item.No}" class="inline-block mx-6 my-6 font-semibold">
               Selengkapnya
             </a>
           </div>
